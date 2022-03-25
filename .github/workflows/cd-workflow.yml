@@ -58,11 +58,11 @@ jobs:
           name: webpack artifacts
           path: public
       - name: Build and push  
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           username: ${{github.actor}}
           password: ${{secrets.GITHUB_TOKEN}}
           registry: docker.pkg.github.com
           repoistory: nganslaw/github-actions-for-packages/tic-tac-toe
-          tags: latest
+          tags: nganslaw/github-actions-for-packages/tic-tac-toe:latest
           tag_with_sha: true
